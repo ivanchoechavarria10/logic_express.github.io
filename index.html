@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Express Locker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="page1" class="page">
+        <img src="Logic Express.jpg" alt="Logic Express Logo" class="logo">
+        <button id="pickupButton">Recoge tu pedido</button>
+    </div>
+
+    <div id="page2" class="page hidden">
+        <button id="back">Atrás</button>
+        <div class="content-center">
+            <img src="Logic Express.jpg" alt="Logic Express Logo" class="logo">
+            <div id="input-container">
+                <input type="password" id="display" readonly>
+                <span id="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+            <div id="keypad">
+                <div class="key">1</div>
+                <div class="key">2</div>
+                <div class="key">3</div>
+                <div class="key">4</div>
+                <div class="key">5</div>
+                <div class="key">6</div>
+                <div class="key">7</div>
+                <div class="key">8</div>
+                <div class="key">9</div>
+                <div class="key" id="backspace">⌫</div>
+                <div class="key">0</div>
+                <div class="key" id="enter">Enter</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #017f8a;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.hidden {
+    transform: translateX(100%);
+}
+
+.logo {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #6daa4a;
+    color: white;
+    padding: 30px 48px;
+    border: none;
+    border-radius: 10px;
+    font-size: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #5d913e;
+}
+
+#input-container {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #6daa4a;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+#toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.key {
+    background-color: #6daa4a;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.key:hover {
+    background-color: #5d913e;
+}
+
+#backspace, #enter {
+    grid-column: span 1;
+}
+
+#back {
+    background-color: #6daa4a;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#back:hover {
+    background-color: #5d913e;
+}
+
+#toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+#toast.hidden {
+    display: none;
+}
+
+#toast.error {
+    background-color: #dc3545;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media queries for iPad */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .logo {
+        width: 420px;
+        margin-bottom: 40px;
+    }
+
+    button, #back {
+        padding: 24px 48px;
+        font-size: 38px;
+    }
+
+    #display {
+        padding: 25px;
+        font-size: 28px;
+    }
+
+    #keypad {
+        gap: 15px;
+    }
+
+    .key {
+        padding: 25px;
+        font-size: 28px;
+    }
+}
+
+/* Additional media queries for responsiveness */
+@media (max-width: 767px) {
+    .logo {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    button, #back {
+        padding: 12px 24px;
+        font-size: 20px;
+    }
+
+    #display {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    #keypad {
+        gap: 5px;
+    }
+
+    .key {
+        padding: 15px;
+        font-size: 20px;
+    }
+}
